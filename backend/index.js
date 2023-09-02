@@ -13,7 +13,7 @@ app.use(cors());
 const __dirname = path.resolve();
 app.use(express.static(path.join(__dirname+"/public")))
 
-console.log(process.env.EMAIL,process.env.PASSWORD)
+console.log(process.env.EMAIL,process.env.PASSWORD,process.env.PORT)
 
 mongoose
   .connect(
@@ -131,8 +131,8 @@ transporter.sendMail(message).then(() => {
   }
 });
 
-const port = "https://sopuiassingment.onrender.com/" 
+const port = process.env.PORT || 5000
 
 app.listen(port, () => {
-  console.log("started at port 9002");
+  console.log(`started at port ${port}`);
 });
