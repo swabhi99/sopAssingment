@@ -131,6 +131,8 @@ transporter.sendMail(message).then(() => {
   }
 });
 
-app.listen(9002, () => {
+const port = "https://sopuiassingment.onrender.com/" 
+
+app.listen(port, () => {
   console.log("started at port 9002");
 });
