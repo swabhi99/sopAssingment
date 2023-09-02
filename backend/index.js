@@ -10,8 +10,8 @@ config()
 const app = express();
 app.use(express.json());
 app.use(cors());
-// const __dirname = path.resolve();
-// app.use(express.static(path.join(__dirname+"/public")))
+const __dirname = path.resolve();
+app.use(express.static(path.join(__dirname+"/public")))
 
 console.log(process.env.EMAIL,process.env.PASSWORD)
 
