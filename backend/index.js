@@ -97,7 +97,7 @@ app.post("/register", async (req, res) => {
                   education:education,
                   institute:institute,
                   experience:experience,
-                  institute2:institute2,
+                  "What institute did you get admitted to in Canada?":institute2,
                   gic:gic,
                   pay:pay,
                 }
